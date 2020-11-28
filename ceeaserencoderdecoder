@@ -1,0 +1,22 @@
+def rot13(string):
+ n_str=''
+ for g in range (0,len(string)):
+  if (65<=ord(string[g])<=90 or 97<=ord(string[g])<=122 ):
+    if (65<=ord(string[g])<=90):
+        if(65<=(ord(string[g])+13)<=90):        
+#            print(string[g]+'->' +chr(ord(string[g])+13))
+            n_str+=(chr(ord(string[g])+13))
+        else:
+#             print(string[g]+'->'+chr(ord(string[g])-13))
+             n_str+=(chr(ord(string[g])-13))
+    if (97<=ord(string[g])<=122):
+        if(97<=(ord(string[g])+13)<=122):        
+#            print(string[g]+'->' +chr(ord(string[g])+13))
+            n_str+=(chr(ord(string[g])+13))
+        else:
+#             print(string[g]+'->' +chr(ord(string[g])-13))
+             n_str+=(chr(ord(string[g])-13))
+  else :
+#        print(string[g])
+      n_str+=string[g]
+ return n_str
